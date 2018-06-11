@@ -6,7 +6,7 @@ const ENDPOINTS = {
   root: () => "/",
   batch: () => "/batch",
   permissions: () => "/permissions",
-  bucket: bucket => "/buckets" + (bucket ? `/${bucket}` : ""),
+  bucket: bucket => "/teams" + (bucket ? `/${bucket}` : ""),
   history: bucket => `${ENDPOINTS.bucket(bucket)}/history`,
   collection: (bucket, coll) =>
     `${ENDPOINTS.bucket(bucket)}/collections` + (coll ? `/${coll}` : ""),
