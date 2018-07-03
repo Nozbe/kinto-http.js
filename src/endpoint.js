@@ -9,11 +9,11 @@ const ENDPOINTS = {
   bucket: bucket => "/teams" + (bucket ? `/${bucket}` : ""),
   history: bucket => `${ENDPOINTS.bucket(bucket)}/history`,
   collection: (bucket, coll) =>
-    `${ENDPOINTS.bucket(bucket)}/collections` + (coll ? `/${coll}` : ""),
+    `${ENDPOINTS.bucket(bucket)}` + (coll ? `/${coll}` : ""),
   group: (bucket, group) =>
     `${ENDPOINTS.bucket(bucket)}/groups` + (group ? `/${group}` : ""),
   record: (bucket, coll, id) =>
-    `${ENDPOINTS.collection(bucket, coll)}/records` + (id ? `/${id}` : ""),
+    `${ENDPOINTS.collection(bucket, coll)}` + (id ? `/${id}` : ""),
   attachment: (bucket, coll, id) =>
     `${ENDPOINTS.record(bucket, coll, id)}/attachment`,
 };
@@ -29,3 +29,4 @@ const ENDPOINTS = {
 export default function endpoint(name, ...args) {
   return ENDPOINTS[name](...args);
 }
+
