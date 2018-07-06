@@ -1,7 +1,7 @@
 {
   "name": "kinto-http",
   "version": "4.5.3",
-  "description": "JavaScript HTTP client for the Kinto API. (Nozbe)",
+  "description": "JavaScript HTTP client for the Kinto API. (Nozbe #2)",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/ src/",
